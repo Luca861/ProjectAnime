@@ -14,7 +14,7 @@ import { DevelAnimeModule } from './modules/devel-anime/devel-anime.module';
     BrowserModule,
     AppRoutingModule,
     DevelAnimeModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
