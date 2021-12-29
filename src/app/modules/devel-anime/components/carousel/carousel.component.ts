@@ -1,7 +1,7 @@
-
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
+
 import { IPartialAnimeManga } from 'src/app/shared/models/interfaces-models';
 import { ApiService } from '../../services/api.service';
 
@@ -17,7 +17,7 @@ export class CarouselComponent implements OnInit {
   constructor(private readonly api: ApiService, private readonly http: HttpClient) { }
 
   ngOnInit(): void {
-    this.testOne$ = this.api.getApi('anime', 'One Piece');
+    this.testOne$ = this.api.getApi('anime', 'Tsubasa');
   }
 
 }
