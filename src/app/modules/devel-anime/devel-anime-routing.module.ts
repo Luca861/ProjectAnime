@@ -2,22 +2,23 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AnimeComponent } from './pages/anime/anime.component';
 import { HomeComponent } from './pages/home/home.component';
+import { MangaComponent } from './pages/manga/manga.component';
+import { ProjectComponent } from './pages/project/project.component';
 
 
 const routes: Routes = [
-  { path: '', redirectTo: 'list', pathMatch: 'full' },
-  {
-    path: 'home', component: HomeComponent,
-        children: [
-       { path: 'anime', component: AnimeComponent },
-    //   { path: 'details/:id', component: CocktailDetailsComponent },
-    // ]
-        ]
-      }
+
+  { path: '', component: ProjectComponent,
+  children: [
+    {path:'', component:HomeComponent},
+    { path: 'anime', component:AnimeComponent},
+    { path: 'manga', component:MangaComponent},
+  ]
+}
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
 export class DevelAnimeRoutingModule { }

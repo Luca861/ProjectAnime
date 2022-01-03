@@ -7,6 +7,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { FormsModule } from '@angular/forms';
 import { MangaComponent } from './pages/manga/manga.component';
 import { AnimeComponent } from './pages/anime/anime.component';
+import { DevelAnimeRoutingModule } from './devel-anime-routing.module';
+import { ProjectComponent } from './pages/project/project.component';
 
 
 
@@ -18,12 +20,17 @@ import { AnimeComponent } from './pages/anime/anime.component';
     HeaderComponent,
     FooterComponent,
     MangaComponent,
-    AnimeComponent
+    AnimeComponent,
+    ProjectComponent
 
   ],
   imports: [
     CommonModule,
-    FormsModule
+    FormsModule,
+    DevelAnimeRoutingModule
+  ],
+  exports: [
+    ProjectComponent
   ]
 })
 export class DevelAnimeModule { }
