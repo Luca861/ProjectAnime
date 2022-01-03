@@ -1,24 +1,32 @@
 <section>
-  <form #f ='ngForm' (ngSubmit)='submit(f)' class="d-flex justify-content-between align-items-center bg-warning p-2">
-    <div>
-      <img class="logo" src="https://iconape.com/wp-content/png_logo_vector/manga-logo.png" alt="logo-da">
-      <button type="submit" class="btn btn-outline-warning">
-        <img src="https://icon-library.com/images/magnify-icon-png/magnify-icon-png-26.jpg" alt="magnify">
-      </button>
-          <input type="text" name="title" class="p-2 rounded-pill border-0" required ngModel>
-        </div>
-        <div class="rounded-pill border-0 ">
-          <label for="type" class="form-label"></label>
-            <select class="form-select form-select-lg mb-4" name="image_url" required ngModel >
-              <option value='anime'> Anime </option>
-              <option value='manga'> Manga </option>
-            </select>
-        </div>
+  <form #f ='ngForm' (ngSubmit)='submit(f)' class="form-pers d-flex justify-content-between align-items-center p-2">
 
-        <div>
-            <button disabled="disabled" id="logIn" class="p-2 text-white border-0 rounded-pill mx-2 bg-primary">Login</button>
-            <button disabled="disabled" id="Register" class="p-2 text-white border-0 rounded-pill mx-2 bg-primary">Register</button>
-        </div>
-      </form>
+  <div>
+    <a href="#">
+      <img class="logo" src="https://iconape.com/wp-content/png_logo_vector/manga-logo.png" alt="logo-da">
+    </a>
+
+    <button type="submit" class="btn btn-pers rounded-pill">
+      <img src="https://icon-library.com/images/magnify-icon-png/magnify-icon-png-26.jpg" alt="magnify">
+    </button>
+
+    <!--🔍 inserire in input e search? -->
+    <input type="text" name="title" class="p-2 rounded-pill border-0 inp-pers" placeholder="Search by name:" required ngModel>
+  </div>
+
+  <div class="div-pers">
+    <label for="type" class="form-label"></label>
+      <select class="form-select form-select-lg mb-4 sel-pers" name="image_url" required ngModel >
+      <option value="" selected disabled>Select category:</option>
+      <option value='anime'> Anime </option>
+      <option value='manga'> Manga </option>
+    </select>
+  </div>
+
+  <div>
+    <button disabled="disabled" id="logIn" class="p-2 rounded-pill mx-2 btn-pers">Login</button>
+    <button disabled="disabled" id="Register" class="p-2 rounded-pill mx-2 btn-pers">Register</button>
+  </div>
+  </form>
 
 </section>

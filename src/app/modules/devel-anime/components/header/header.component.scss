@@ -1,11 +1,37 @@
+.form-pers{
+  background-color: rgb(245, 192, 48)
+}
+
+.div-pers{
+  margin-left: -200px;
+}
+
 .logo {
-  width: 45px;
+  width: 60px;
+  margin-right: 300px;
+  margin-left: 150px;
+}
+
+.btn-pers{
+  color: black;
+  background-color: transparent;
+  border: 1px black solid;
+  margin-right: 50px;
+}
+
+.btn-pers:hover{
+  transition: 0.6s;
+  background-color: white;
 }
 
 img[alt="magnify"] {
   width: 2rem;
   height: 2rem;
   margin: 0 1rem;
+}
+
+.sel-pers{
+  padding: 4.5px 35px 4.5px 35px;
 }
 
 button{
