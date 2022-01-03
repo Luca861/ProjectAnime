@@ -5,7 +5,9 @@ import { CarouselComponent } from './components/carousel/carousel.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { FormsModule } from '@angular/forms';
+import { MangaComponent } from './pages/manga/manga.component';
 import { AnimeComponent } from './pages/anime/anime.component';
+
 
 
 
@@ -15,7 +17,9 @@ import { AnimeComponent } from './pages/anime/anime.component';
     CarouselComponent,
     HeaderComponent,
     FooterComponent,
+    MangaComponent,
     AnimeComponent
+
   ],
   imports: [
     CommonModule,
