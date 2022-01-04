@@ -1,3 +1,15 @@
-* {
-  background-color: black;
+
+button {
+  background-color: #0000005e;
 }
+
+.carousel-item {
+  height: 400px;
+}
+
+.carousel-item img {
+  top: 0;
+  left: 0;
+  min-height: 100%;
+}
+
