@@ -1,7 +1,7 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { map, Observable } from 'rxjs';
-import { IPartialAnimeManga, PartialAnimeManga } from 'src/app/shared/models/interfaces-models';
+import { IPartialAnimeManga, PartialContent, PartialAnimeManga,IPartialContent } from 'src/app/shared/models/interfaces-models';
 import { environment } from 'src/environments/environment';
 
 @Injectable({
@@ -18,6 +18,13 @@ export class ApiService {
     .pipe(
       map(response => response.results.map(item => PartialAnimeManga.Build(item)))
       );
+  }
+
+  getTopTitle(category:string):Observable<PartialContent[]>{
+    return this.http.get<{top:IPartialContent[]}>(`${environment.animeApi}${category}/1`)
+    .pipe(
+      map(response => response.top.map(item => PartialContent.Build(item)))
+    )
   }
 
 }
