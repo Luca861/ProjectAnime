@@ -1,4 +1,4 @@
-<section>
+<!-- <section>
   <form #f ='ngForm' (ngSubmit)='submit(f)' class="form-pers d-flex justify-content-between align-items-center p-2">
 
   <div>
@@ -10,7 +10,7 @@
       <img src="https://icon-library.com/images/magnify-icon-png/magnify-icon-png-26.jpg" alt="magnify">
     </button>
 
-    <!--(🔍) inserire in input e search? -->
+
     <input type="text" name="title" class="p-2 rounded-pill border-0 inp-pers" placeholder="Search by name:" required ngModel>
   </div>
 
@@ -29,4 +29,40 @@
   </div>
   </form>
 
-</section>
+</section> -->
+
+
+
+
+  <div class="container-fluid form-pers">
+    <div class="d-flex justify-content-between py-3">
+
+    <div>
+      <a routerLink="/develanime">
+        <img class="logo" src="https://iconape.com/wp-content/png_logo_vector/manga-logo.png" alt="logo-da">
+      </a>
+    </div>
+
+      <div class="d-flex">
+        <input type="text" name="title" class="p-2 rounded-pill border-0 inp-pers me-5" placeholder="Search by name:" required ngModel>
+
+      <label for="type" class="form-label"></label>
+      <select class="form-select form-select-lg sel-pers me-5" name="image_url" required ngModel >
+        <option value="" selected disabled>Select category:</option>
+        <option value='anime'> Anime </option>
+        <option value='manga'> Manga </option>
+      </select>
+
+      <button type="submit" class="btn btn-pers rounded-pill">
+        <img src="https://icon-library.com/images/magnify-icon-png/magnify-icon-png-26.jpg" alt="magnify">
+      </button>
+      </div>
+
+
+      <div class="d-flex">
+        <button disabled="disabled" id="logIn" class="p-2 rounded-pill mx-2 btn-pers">Login</button>
+        <button disabled="disabled" id="Register" class="p-2 rounded-pill mx-2 btn-pers">Register</button>
+      </div>
+
+    </div>
+  </div>
