@@ -1,3 +1,20 @@
 <app-header></app-header>
-prova manga
+<div *ngIf="topManga$ |async as topManga">
+  <div *ngFor="let item of topManga">
+    <div class="card" style="width: 18rem;">
+      <img [src]="item.image_url" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{item.title}}</h5>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Rank #{{item.rank}}</li>
+        <li class="list-group-item">A second item</li>
+        <li class="list-group-item">A third item</li>
+      </ul>
+      <div class="card-body">
+        <a href="{{item.url}}" class="card-link" target="_blank">Manga Link</a>
+      </div>
+    </div>
+  </div>
+</div>
 <app-footer></app-footer>

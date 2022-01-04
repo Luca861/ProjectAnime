@@ -1,3 +1,20 @@
 <app-header></app-header>
-Prova
+<div *ngIf="topAnime$ |async as topAnime">
+  <div *ngFor="let item of topAnime">
+    <div class="card" style="width: 18rem;">
+      <img [src]="item.image_url" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{item.title}}</h5>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Rank #{{item.rank}}</li>
+        <li class="list-group-item">A second item</li>
+        <li class="list-group-item">A third item</li>
+      </ul>
+      <div class="card-body">
+        <a href="{{item.url}}" class="card-link" target="_blank">Anime Link</a>
+      </div>
+    </div>
+  </div>
+</div>
 <app-footer></app-footer>
