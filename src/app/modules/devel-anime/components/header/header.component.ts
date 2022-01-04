@@ -1,6 +1,9 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { IPartialAnimeManga } from 'src/app/shared/models/interfaces-models';
+import { Observable } from 'rxjs';
+import { IPartialAnimeManga, PartialAnimeManga } from 'src/app/shared/models/interfaces-models';
+import { ApiService } from '../../services/api.service';
+
 
 
 @Component({
@@ -10,22 +13,17 @@ import { IPartialAnimeManga } from 'src/app/shared/models/interfaces-models';
 })
 export class HeaderComponent implements OnInit {
 
-  @Output() submitContent = new EventEmitter<IPartialAnimeManga>();
+  result$!: Observable<PartialAnimeManga[]>
+  research!: IPartialAnimeManga;
 
-  selectedContent:string = '';
-  selectedCategory:string = '';
+  constructor(private readonly headerService: ApiService) { }
 
-  constructor() { }
+  ngOnInit(): void { }
 
-  ngOnInit(): void {}
-
-  submit(f:NgForm){
-    this.submitContent.emit(f.form.value)
+  submit(f: NgForm) {
+    this.research = f.form.value;
+    this.result$ = this.headerService.getApi(this.research.image_url, this.research.title);
   }
-
-
-
-
-  }
+}
 
 

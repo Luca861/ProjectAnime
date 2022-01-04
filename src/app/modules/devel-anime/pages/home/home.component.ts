@@ -9,14 +9,12 @@ import { ApiService } from '../../services/api.service';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private readonly homeService: ApiService) { }
+  constructor() { }
 
   ngOnInit(): void {
 }
 
-selectedContent(item:IPartialAnimeManga){
-  this.homeService.getApi(item.image_url, item.title).subscribe(data => console.log(data));
-}
+
 
 
 }

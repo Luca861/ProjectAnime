@@ -1,32 +1,48 @@
-<section>
-  <form #f ='ngForm' (ngSubmit)='submit(f)' class="form-pers d-flex justify-content-between align-items-center p-2">
-
+<form #f ='ngForm' (ngSubmit)='submit(f)' class="form-pers d-flex justify-content-between align-items-center p-2">
   <div>
     <a routerLink="/develanime">
       <img class="logo" src="https://iconape.com/wp-content/png_logo_vector/manga-logo.png" alt="logo-da">
     </a>
-
-    <button type="submit" class="btn btn-pers rounded-pill">
-      <img src="https://icon-library.com/images/magnify-icon-png/magnify-icon-png-26.jpg" alt="magnify">
-    </button>
-
     <!--(🔍) inserire in input e search? -->
     <input type="text" name="title" class="p-2 rounded-pill border-0 inp-pers" placeholder="Search by name:" required ngModel>
   </div>
-
-  <div class="div-pers">
+  <div>
     <label for="type" class="form-label"></label>
-      <select class="form-select form-select-lg mb-4 sel-pers" name="image_url" required ngModel >
+      <select class="form-select form-select-lg mb-4 sel-pers rounded-pill" name="image_url" required ngModel >
       <option value="" selected disabled>Select category:</option>
       <option value='anime'> Anime </option>
       <option value='manga'> Manga </option>
     </select>
   </div>
-
-  <div>
+<button type="submit" class="btn btn-pers rounded-pill" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      <img src="https://icon-library.com/images/magnify-icon-png/magnify-icon-png-26.jpg" alt="magnify">
+    </button>
+<div>
     <button disabled="disabled" id="logIn" class="p-2 rounded-pill mx-2 btn-pers">Login</button>
     <button disabled="disabled" id="Register" class="p-2 rounded-pill mx-2 btn-pers">Register</button>
   </div>
   </form>
 
-</section>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Results</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div *ngIf="result$ | async as prova">
+      <div class="modal-body">
+        {{prova[0].title}}
+      </div>
+    </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
