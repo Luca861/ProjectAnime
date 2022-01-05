@@ -21,7 +21,7 @@ export class ApiService {
   }
 
   getTopTitle(category:string):Observable<PartialContent[]>{
-    return this.http.get<{top:IPartialContent[]}>(`${environment.animeApi}${category}/1`)
+    return this.http.get<{top:IPartialContent[]}>(`${environment.topApi}${category}/1`)
     .pipe(
       map(response => response.top.map(item => PartialContent.Build(item)))
     )

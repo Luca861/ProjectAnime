@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-carousel',
@@ -7,9 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CarouselComponent implements OnInit {
 
-imageOne: string = 'https://img.wallpapersafari.com/desktop/1920/1080/48/59/J8faFX.jpg';
-imageTwo: string = 'https://3.bp.blogspot.com/-Yt0TlLAen40/XSRKIEy-85I/AAAAAAAAAjs/_rZ0iVQWkqAPVmyutfNTKjVcA4_RLtA_QCKgBGAs/w1920-h1080-c/mikasa-levi-colossal-titan-attack-on-titan-uhdpaper.com-8K-160.jpg';
-imageThree: string = 'https://www.ammazzacaffe.org/wp-content/uploads/2021/05/violetevergarden_s.jpg';
+  imageOne: string = `${environment.imageOneCarousel}`;
+  imageTwo: string = `${environment.imageTwoCarousel}`;
+  imageThree: string = `${environment.imageThreeCarousel}`;
 
   constructor() { }
 

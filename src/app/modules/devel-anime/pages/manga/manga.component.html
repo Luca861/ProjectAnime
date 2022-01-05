@@ -1,20 +1,23 @@
 <app-header></app-header>
-<div *ngIf="topManga$ |async as topManga">
-  <div *ngFor="let item of topManga">
-    <div class="card" style="width: 18rem;">
-      <img [src]="item.image_url" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">{{item.title}}</h5>
-      </div>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item">Rank #{{item.rank}}</li>
-        <li class="list-group-item">A second item</li>
-        <li class="list-group-item">A third item</li>
-      </ul>
-      <div class="card-body">
-        <a href="{{item.url}}" class="card-link" target="_blank">Manga Link</a>
+<section class="bg-dark">
+  <section class="" *ngIf="topManga$ | async as topManga">
+    <div class="row d-flex text-center">
+      <h1 class="title">Top 50 manga list</h1>
+      <div class="col-lg-2 col-md-12 p-3 crd" *ngFor="let item of topManga">
+        <div class="bg-white rounded shadow-sm h-100">
+          <a href="{{ item.url }}" target="_blank" class="">
+            <img [src]="item.image_url" alt="cover_img" class="img-fluid card-img-top" />
+          </a>
+          <div class="p-4">
+            <h4 class="text-muted fw-bold mb-0">
+              {{ item.title }}
+            </h4>
+            <div class="d-flex align-items-center justify-content-center rounded-pill bg-light px-3 py-2 mt-4">
+              <span class="font-weight-bold">Top view position: {{ item.rank }}</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
-<app-footer></app-footer>
+  </section>
+  <app-footer></app-footer>

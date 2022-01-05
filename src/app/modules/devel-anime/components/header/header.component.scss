@@ -43,7 +43,6 @@
 
 img[alt="magnify"] {
   width: 40%;
-
 }
 
 .imgModal {
@@ -51,3 +50,8 @@ img[alt="magnify"] {
   height: 30vh;
 }
 
+.modal-body {
+  background-color: #212529;
+  color: #cd4141fa;
+  text-align: center;
+}

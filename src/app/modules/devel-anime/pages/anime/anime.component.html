@@ -1,9 +1,5 @@
 <app-header></app-header>
-
-<!-- Modal gallery -->
 <section class="bg-dark">
-
-  <!-- Section: Images -->
   <section class="" *ngIf="topAnime$ | async as topAnime">
     <div class="row d-flex text-center">
       <h1 class="title">Top 50 anime list</h1>
@@ -12,7 +8,6 @@
           <a href="{{ item.url }}" target="_blank" class="">
             <img [src]="item.image_url" alt="cover_img" class="img-fluid card-img-top" />
           </a>
-
           <div class="p-4">
             <h4 class="text-muted fw-bold mb-0">
               {{ item.title }}
@@ -25,56 +20,4 @@
       </div>
     </div>
   </section>
-  <!-- Section: Images -->
-
-  <!-- Section: Modals -->
-  <section class="">
-    <!-- Modal 1 -->
-    <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModal1Label"
-      aria-hidden="true">
-      <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-          <div class="ratio ratio-16x9">
-            <iframe src="https://www.youtube.com/embed/A3PDXmYoF5U" title="YouTube video" allowfullscreen></iframe>
-          </div>
-
-          <div class="text-center py-3">
-            <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">Close</button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Modal 2 -->
-    <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModal2Label" aria-hidden="true">
-      <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-          <div class="ratio ratio-16x9">
-            <iframe src="https://www.youtube.com/embed/wTcNtgA6gHs" title="YouTube video" allowfullscreen></iframe>
-          </div>
-
-          <div class="text-center py-3">
-            <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">Close</button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Modal 3 -->
-    <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModal3Label" aria-hidden="true">
-      <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-          <div class="ratio ratio-16x9">
-            <iframe src="https://www.youtube.com/embed/vlDzYIIOYmM" title="YouTube video" allowfullscreen></iframe>
-          </div>
-
-          <div class="text-center py-3">
-            <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">Close</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- Section: Modals -->
-</section>
-<!-- Modal gallery -->
-
-<app-footer></app-footer>
+  <app-footer></app-footer>
