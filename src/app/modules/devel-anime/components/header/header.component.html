@@ -15,7 +15,7 @@
         <option value='anime'>Anime</option>
         <option value='manga'>Manga</option>
       </select>
-      <button type="submit" class="btn btn-search ms-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      <button type="submit" class="btn btn-search ms-3" data-bs-toggle="modal" data-bs-target="#exampleModal" [disabled]="f.invalid">
         <img src="https://icon-library.com/images/magnify-icon-png/magnify-icon-png-26.jpg" alt="magnify">
       </button>
     </div>
@@ -34,10 +34,14 @@
         <h5 class="modal-title" id="exampleModalLabel">Results</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div *ngIf="result$ | async as prova">
-        <div class="modal-body">
-          {{prova[0].title}}
+      <div *ngIf="result$ | async as response">
+        <div *ngFor="let item of response">
+        <div class="modal-body fs-4">
+          <span>{{item.title}}
+            <img [src]='item.image_url' class="img-thumbnail">
+          </span>
         </div>
+      </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
