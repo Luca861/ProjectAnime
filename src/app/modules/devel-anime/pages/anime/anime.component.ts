@@ -9,6 +9,7 @@ import { ApiService } from '../../services/api.service';
   styleUrls: ['./anime.component.scss']
 })
 export class AnimeComponent implements OnInit {
+
   category: string = 'anime';
   topAnime$! : Observable<IPartialContent[]>;
 

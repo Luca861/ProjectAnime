@@ -2,12 +2,11 @@
 
 <!-- Modal gallery -->
 <section class="bg-dark">
+
   <!-- Section: Images -->
-
-
   <section class="" *ngIf="topAnime$ | async as topAnime">
     <div class="row d-flex text-center">
-      <h1 class="title">Best Anime</h1>
+      <h1 class="title">Top 50 anime list</h1>
       <div class="col-lg-2 col-md-12 p-3 crd" *ngFor="let item of topAnime">
         <div class="bg-white rounded shadow-sm h-100">
           <a href="{{ item.url }}" target="_blank" class="">
@@ -18,21 +17,8 @@
             <h4 class="text-muted fw-bold mb-0">
               {{ item.title }}
             </h4>
-            <div
-              class="
-                d-flex
-                align-items-center
-                justify-content-center
-                rounded-pill
-                bg-light
-                px-3
-                py-2
-                mt-4
-              "
-            >
-              <span class="font-weight-bold"
-                >Top view position: {{ item.rank }}</span
-              >
+            <div class="d-flex align-items-center justify-content-center rounded-pill bg-light px-3 py-2 mt-4">
+              <span class="font-weight-bold">Top view position: {{ item.rank }}</span>
             </div>
           </div>
         </div>
@@ -44,91 +30,44 @@
   <!-- Section: Modals -->
   <section class="">
     <!-- Modal 1 -->
-    <div
-      class="modal fade"
-      id="exampleModal1"
-      tabindex="-1"
-      aria-labelledby="exampleModal1Label"
-      aria-hidden="true"
-    >
+    <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModal1Label"
+      aria-hidden="true">
       <div class="modal-dialog modal-lg">
         <div class="modal-content">
           <div class="ratio ratio-16x9">
-            <iframe
-              src="https://www.youtube.com/embed/A3PDXmYoF5U"
-              title="YouTube video"
-              allowfullscreen
-            ></iframe>
+            <iframe src="https://www.youtube.com/embed/A3PDXmYoF5U" title="YouTube video" allowfullscreen></iframe>
           </div>
 
           <div class="text-center py-3">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-mdb-dismiss="modal"
-            >
-              Close
-            </button>
+            <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">Close</button>
           </div>
         </div>
       </div>
     </div>
     <!-- Modal 2 -->
-    <div
-      class="modal fade"
-      id="exampleModal2"
-      tabindex="-1"
-      aria-labelledby="exampleModal2Label"
-      aria-hidden="true"
-    >
+    <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModal2Label" aria-hidden="true">
       <div class="modal-dialog modal-lg">
         <div class="modal-content">
           <div class="ratio ratio-16x9">
-            <iframe
-              src="https://www.youtube.com/embed/wTcNtgA6gHs"
-              title="YouTube video"
-              allowfullscreen
-            ></iframe>
+            <iframe src="https://www.youtube.com/embed/wTcNtgA6gHs" title="YouTube video" allowfullscreen></iframe>
           </div>
 
           <div class="text-center py-3">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-mdb-dismiss="modal"
-            >
-              Close
-            </button>
+            <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">Close</button>
           </div>
         </div>
       </div>
     </div>
     <!-- Modal 3 -->
-    <div
-      class="modal fade"
-      id="exampleModal3"
-      tabindex="-1"
-      aria-labelledby="exampleModal3Label"
-      aria-hidden="true"
-    >
+    <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModal3Label" aria-hidden="true">
       <div class="modal-dialog modal-lg">
         <div class="modal-content">
           <div class="ratio ratio-16x9">
-            <iframe
-              src="https://www.youtube.com/embed/vlDzYIIOYmM"
-              title="YouTube video"
-              allowfullscreen
-            ></iframe>
+            <iframe src="https://www.youtube.com/embed/vlDzYIIOYmM" title="YouTube video" allowfullscreen></iframe>
           </div>
 
           <div class="text-center py-3">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-mdb-dismiss="modal"
-            >
-              Close
-            </button>
+            <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">Close</button>
           </div>
         </div>
       </div>

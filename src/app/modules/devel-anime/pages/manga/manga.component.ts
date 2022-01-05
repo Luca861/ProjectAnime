@@ -9,6 +9,7 @@ import { ApiService } from '../../services/api.service';
   styleUrls: ['./manga.component.scss']
 })
 export class MangaComponent implements OnInit {
+
   category: string = 'manga';
   topManga$! :Observable<IPartialContent[]>
 

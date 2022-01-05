@@ -9,12 +9,12 @@ import { ProjectComponent } from './pages/project/project.component';
 const routes: Routes = [
 
   { path: '', component: ProjectComponent,
-  children: [
-    {path:'', component:HomeComponent},
+    children: [
+    { path: '', component:HomeComponent},
     { path: 'anime', component:AnimeComponent},
     { path: 'manga', component:MangaComponent},
-  ]
-}
+    ]
+  }
 ];
 
 @NgModule({

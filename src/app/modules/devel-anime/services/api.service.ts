@@ -17,7 +17,7 @@ export class ApiService {
     return this.http.get<{results:IPartialAnimeManga[]}>(`${environment.searchUrlApi}${type}`,{params})
     .pipe(
       map(response => response.results.map(item => PartialAnimeManga.Build(item)))
-      );
+    );
   }
 
   getTopTitle(category:string):Observable<PartialContent[]>{
