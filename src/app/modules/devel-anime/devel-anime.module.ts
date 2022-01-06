@@ -10,6 +10,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
 import { MangaComponent } from './pages/manga/manga.component';
 import { AnimeComponent } from './pages/anime/anime.component';
+import { FormComponent } from './components/form/form.component';
+import { ModalComponent } from './components/modal/modal.component';
 
 
 @NgModule({
@@ -20,7 +22,9 @@ import { AnimeComponent } from './pages/anime/anime.component';
     FooterComponent,
     MangaComponent,
     AnimeComponent,
-    ProjectComponent
+    ProjectComponent,
+    FormComponent,
+    ModalComponent
 
   ],
   imports: [

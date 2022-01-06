@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { NgForm } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { IPartialAnimeManga, PartialAnimeManga } from 'src/app/shared/models/interfaces-models';
 import { ApiService } from '../../services/api.service';
@@ -20,10 +19,10 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void { }
 
-  submit(f: NgForm) {
-    this.research = f.form.value;
-    this.result$ = this.headerService.getApi(this.research.image_url, this.research.title);
+  selectedContent(value: IPartialAnimeManga) {
+    this.result$ = this.headerService.getApi(value.image_url, value.title);
   }
+  
 }
 
 
