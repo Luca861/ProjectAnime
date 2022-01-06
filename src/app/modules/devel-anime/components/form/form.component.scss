@@ -6,6 +6,10 @@
   width: 50px;
   margin-left: 8vh;
 }
+.logo:hover {
+  transform: rotateZ(360deg);
+  transition: 1s;
+}
 
 .search {
   width: 20vh;

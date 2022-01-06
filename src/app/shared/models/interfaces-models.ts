@@ -21,6 +21,8 @@ export class PartialAnimeManga{
     title:string;
     url:string;
     image_url:string;
+    start_date:string;
+    end_date:string;
 }
 
 export class PartialContent{
@@ -29,13 +31,17 @@ export class PartialContent{
     public title = '',
     public url = '',
     public image_url='',
+    public start_date='',
+    public end_date='',
   ){}
   public static Build(item:IPartialContent):PartialContent{
     return new this(
       item.rank,
       item.title,
       item.url,
-      item.image_url
+      item.image_url,
+      item.start_date,
+      item.end_date
     )
   }
 }

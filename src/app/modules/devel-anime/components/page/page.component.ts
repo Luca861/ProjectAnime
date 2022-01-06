@@ -9,6 +9,7 @@ import { IPartialContent } from 'src/app/shared/models/interfaces-models';
 })
 export class PageComponent implements OnInit {
   @Input() topContent$!:Observable<IPartialContent[]>;
+  @Input() category!:string;
 
   constructor() { }
 
