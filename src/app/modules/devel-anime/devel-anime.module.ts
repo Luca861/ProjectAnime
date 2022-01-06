@@ -14,7 +14,6 @@ import { FormComponent } from './components/form/form.component';
 import { ModalComponent } from './components/modal/modal.component';
 import { PageComponent } from './components/page/page.component';
 
-
 @NgModule({
   declarations: [
     HomeComponent,
@@ -26,16 +25,9 @@ import { PageComponent } from './components/page/page.component';
     ProjectComponent,
     FormComponent,
     ModalComponent,
-    PageComponent
-
+    PageComponent,
   ],
-  imports: [
-    CommonModule,
-    FormsModule,
-    DevelAnimeRoutingModule
-  ],
-  exports: [
-    ProjectComponent
-  ]
+  imports: [CommonModule, FormsModule, DevelAnimeRoutingModule],
+  exports: [ProjectComponent],
 })
-export class DevelAnimeModule { }
+export class DevelAnimeModule {}
