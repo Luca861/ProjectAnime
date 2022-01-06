@@ -1,6 +1,6 @@
 <app-header></app-header>
 <section class="bg-dark">
-  <section class="" *ngIf="topManga$ | async as topManga">
+  <section class="" *ngIf="topManga$ | async as topManga; else loadingSpinner">
     <div class="row d-flex text-center">
       <h1 class="title">Top 50 manga list</h1>
       <div class="col-lg-2 col-md-12 p-3 crd" *ngFor="let item of topManga">
@@ -21,3 +21,12 @@
     </div>
   </section>
   <app-footer></app-footer>
+
+
+  <ng-template #loadingSpinner>
+    <div class="text-center">
+      <div class="spinner-border" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+    </div>
+  </ng-template>

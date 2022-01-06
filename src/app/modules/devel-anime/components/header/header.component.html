@@ -35,7 +35,7 @@
         <h5 class="modal-title" id="exampleModalLabel">Results</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div *ngIf="result$ | async as response">
+      <div *ngIf="result$ | async as response; else noResult ">
         <div *ngFor="let item of response">
         <div class="modal-body fs-4">
           <span>{{item.title}}
@@ -50,3 +50,10 @@
     </div>
   </div>
 </div>
+
+<ng-template #noResult>
+  <div class="text-center">
+      <h5>Your search did not have any matches</h5>
+      <h6>Try different keywords</h6>
+  </div>
+</ng-template>
