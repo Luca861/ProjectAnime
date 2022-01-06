@@ -12,6 +12,7 @@ import { MangaComponent } from './pages/manga/manga.component';
 import { AnimeComponent } from './pages/anime/anime.component';
 import { FormComponent } from './components/form/form.component';
 import { ModalComponent } from './components/modal/modal.component';
+import { PageComponent } from './components/page/page.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { ModalComponent } from './components/modal/modal.component';
     AnimeComponent,
     ProjectComponent,
     FormComponent,
-    ModalComponent
+    ModalComponent,
+    PageComponent
 
   ],
   imports: [
