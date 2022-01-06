@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { DevelAnimeRoutingModule } from './devel-anime-routing.module';
-import { ProjectComponent } from './pages/project/project.component';
+import { ProjectComponent } from './pages/project.component';
 
 import { HeaderComponent } from './components/header/header.component';
 import { CarouselComponent } from './components/carousel/carousel.component';

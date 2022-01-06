@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AnimeComponent } from './pages/anime/anime.component';
 import { HomeComponent } from './pages/home/home.component';
 import { MangaComponent } from './pages/manga/manga.component';
-import { ProjectComponent } from './pages/project/project.component';
+import { ProjectComponent } from './pages/project.component';
 
 
 const routes: Routes = [
