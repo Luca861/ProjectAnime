@@ -1,0 +1,50 @@
+.form-pers {
+  background-color: #212529;
+}
+
+.logo {
+  width: 50px;
+  margin-left: 8vh;
+}
+.logo:hover {
+  transform: rotateZ(360deg);
+  transition: 1s;
+}
+
+.search {
+  width: 20vh;
+  border-radius: 5px;
+}
+
+.form-select {
+  width: 20vh;
+  height: 8%;
+  font-size: 1rem;
+}
+
+.btn-search {
+  color: black;
+  background-color: #cd4141fa;
+  width: 6.2%;
+  border-radius: 1.2vh;
+}
+
+.btn-log,
+.btn-register {
+  color: black;
+  background-color: #cd4141fa;
+  margin-right: 6vh;
+  width: 6rem;
+  border-radius: 1.2vh;
+}
+
+.btn-search:hover,
+.btn-log:hover,
+.btn-register:hover {
+  transition: 0.6s;
+  background-color: white;
+}
+
+img[alt="magnify"] {
+  width: 40%;
+}

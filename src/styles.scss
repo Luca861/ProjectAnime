@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+*{
+    font-family: "Anime";
+    font-weight:normal;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face{
+  font-family:"Anime" ;
+  src:local("Anime"),url(./assets/fonts/AnitypeRedwood-1.otf) format("truetype");
+}
